@@ -6,12 +6,16 @@ from typing import Annotated
 from langchain_ollama import ChatOllama
 from langgraph.graph import StateGraph, MessagesState, START, END
 from langgraph.prebuilt import ToolNode, tools_condition
+from langgraph.checkpoint.memory import InMemorySaver
 from src.tools import check_attendance_eligibility, classes_needed_for_eligibility
 
 
-def create_attendance_agent():
+def create_attendance_agent(with_memory=False):
     """
     Create a LangGraph attendance agent with tool calling capabilities.
+    
+    Args:
+        with_memory: If True, compiles with InMemorySaver checkpointer for conversation memory
     
     Graph structure:
         START -> agent -> tools_condition -> tools -> agent -> END
@@ -47,7 +51,11 @@ def create_attendance_agent():
     builder.add_conditional_edges("agent", tools_condition)
     builder.add_edge("tools", "agent")
     
-    # Compile the graph
-    graph = builder.compile()
+    # Compile the graph with or without memory
+    if with_memory:
+        checkpointer = InMemorySaver()
+        graph = builder.compile(checkpointer=checkpointer)
+    else:
+        graph = builder.compile()
     
     return graph
