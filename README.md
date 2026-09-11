@@ -6,7 +6,7 @@ A LangGraph-based intelligent agent that demonstrates conversational memory and 
 
 ---
 
-## 🎯 Overview
+##  Overview
 
 This project is a learning implementation focused on **LangGraph's conversation memory capabilities** using the `InMemorySaver` checkpointer. It demonstrates how an AI agent can remember information from earlier conversation turns and use that information to make intelligent tool calls later, without users needing to repeat themselves.
 
@@ -19,18 +19,18 @@ This project is a learning implementation focused on **LangGraph's conversation 
 
 ---
 
-## ✨ Features
+##  Features
 
-- **🧠 Conversational Memory**: Remembers attendance information across multiple conversation turns
-- **🔧 Intelligent Tool Calling**: Automatically decides when to use tools based on conversation context
-- **🧵 Thread Isolation**: Multiple conversations with separate, isolated memories
-- **📊 Attendance Checking**: Verifies if students meet the 75% attendance requirement
-- **📈 Planning Tool**: Calculates how many classes must be attended to reach eligibility
-- **🔍 Trace Utilities**: Debug and inspect agent behavior and tool calls
+- ** Conversational Memory**: Remembers attendance information across multiple conversation turns
+- ** Intelligent Tool Calling**: Automatically decides when to use tools based on conversation context
+- ** Thread Isolation**: Multiple conversations with separate, isolated memories
+- ** Attendance Checking**: Verifies if students meet the 75% attendance requirement
+- ** Planning Tool**: Calculates how many classes must be attended to reach eligibility
+- ** Trace Utilities**: Debug and inspect agent behavior and tool calls
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Tech Stack
 
@@ -120,7 +120,7 @@ Attendence.io/
 
 ---
 
-## 🚀 Setup
+##  Setup
 
 ### Prerequisites
 
@@ -153,7 +153,7 @@ ollama list
 
 ---
 
-## 🎮 Running the Project
+##  Running the Project
 
 ### Quick Start
 
@@ -193,7 +193,7 @@ python milestone7_summary.py  # Capstone demonstration
 
 ---
 
-## 📚 Learning Progression
+##  Learning Progression
 
 ### Part 1: Conversation Memory
 
@@ -266,7 +266,7 @@ Result: "You need to attend 17 more classes out of 20 remaining."
 
 ---
 
-## 🔧 Trace Verification
+##  Trace Verification
 
 The project includes tracing utilities to inspect agent behavior:
 
@@ -285,15 +285,15 @@ print_compact_trace(result)
 
 **Example Output**:
 ```
-[0] 👤 User: I attended 28 of 40 classes. Am I eligible?
-[1] 🤖 AI -> 🔧 check_attendance_eligibility(attended=28, total=40)
-[2] 🔧 Tool: NOT ELIGIBLE: 70.0% attendance (below 75%).
-[3] 🤖 AI: Based on the information provided, you have 70.0% attendance...
+[0]  User: I attended 28 of 40 classes. Am I eligible?
+[1]  AI -> 🔧 check_attendance_eligibility(attended=28, total=40)
+[2]  Tool: NOT ELIGIBLE: 70.0% attendance (below 75%).
+[3]  AI: Based on the information provided, you have 70.0% attendance...
 ```
 
 ---
 
-## 🎓 Key Learnings
+##  Key Learnings
 
 ### 1. MessagesState
 
@@ -360,7 +360,7 @@ Multi-turn intelligence:
 
 ---
 
-## 🔑 Important Notes
+##  Important Notes
 
 ### InMemorySaver Limitations
 
@@ -378,7 +378,7 @@ Multi-turn intelligence:
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 ```bash
 # Run tool tests
@@ -389,7 +389,7 @@ python tests/test_tools.py
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 This is a learning project. Feel free to:
 - Explore the code
@@ -399,13 +399,13 @@ This is a learning project. Feel free to:
 
 ---
 
-## 📜 License
+##  License
 
 This project is for educational purposes.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **LangChain** - For the amazing framework
 - **LangGraph** - For conversation memory capabilities
@@ -414,7 +414,7 @@ This project is for educational purposes.
 
 ---
 
-## 📞 Contact
+##  Contact
 
 **GitHub**: [rahultakale44/Attendence.io](https://github.com/rahultakale44/Attendence.io)
 
